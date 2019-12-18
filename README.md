@@ -1,32 +1,24 @@
-# Simple Vue.js SPA
+# SPA-BlogIn
+SPA on Vuex. (adaptive, responsive)
 
-> A Vue.js Single Page Application Tutorial
 
-## How to navigate
+Used technology: SASS, Vuex. Vue-Router, MongoDb, axios.
 
-You can check out any point of the tutorial using:
+Webpack web server, hot reload.
 
-```
-git checkout step-?
-```
+To install:
+1. Clone this repository and BlogIn-server
+2. Go to command line
+3. Write cd {your path}/BlogIn
+4. npm install // to install all package
+5. npm run start
 
-To see the changes made between any two lessons use the `git diff` command:
+Description:
 
-```
-git diff step-?..step-?
-```
+Journal: Get Request from MongoDB
 
-## Build Setup
+Add to journal: Post to database your story
 
-``` bash
-# install dependencies
-npm install
+Login: Enter to profile Login:admin passsword:12345
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Profile: Delete and edit posts from database.
