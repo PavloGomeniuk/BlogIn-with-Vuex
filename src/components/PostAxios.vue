@@ -1,61 +1,54 @@
 <template lang="html">
-  <div class="main-section-add">
-       <h3 class="main-section-add-text_H3">Add to journal</h3>
-       <form @submit.prevent="formSubmit" class="form-group">
-           <label for="title">Title of your story</label>
-           <input name="title" type="text" v-model="postBody.title" class="form-group-input"/>
-           <label for="image">Download image for your story</label>
-           <input name="image" type="text" v-model="postBody.backgroundURL" class="form-group-input"/>
-           <label for="story">Describe your story</label>
-           <textarea name="story" v-model="postBody.text" class="form-group-textarea"></textarea>
-           <div class="btn-box">
-               <input type="submit" class="btn_accept"/>
-               <button class="btn_clear" @click.prevent="clearForm">Clear</button>
-           </div>
-       </form>
-   </div>
+    <div class="main-section-add">
+        <h3 class="main-section-add-text_H3">Add to journal</h3>
+        <form @submit.prevent="formSubmit" class="form-group">
+            <label for="title">Title of your story</label>
+            <input name="title" type="text" v-model="postBody.title" class="form-group-input"/>
+            <label for="image">Download image for your story</label>
+            <input name="image" type="text" v-model="postBody.backgroundURL" class="form-group-input"/>
+            <label for="story">Describe your story</label>
+            <textarea name="story" v-model="postBody.text" class="form-group-textarea"></textarea>
+            <div class="btn-box">
+                <input type="submit" class="btn_accept"/>
+                <button class="btn_clear" @click.prevent="clearForm">Clear</button>
+            </div>
+        </form>
+    </div>
 </template>
 
 <script>
-  import axios from 'axios';
-
-  export default {
+import axios from 'axios';
+export default {
     data: ()=> ({
-      postBody:{
-        title:"",
-        text:"",
-        backgroundURL:"",
-      },
-      errors:[]
+        postBody:{
+            title:"",
+            text:"",
+            backgroundURL:"",
+        },
+        errors:[]
     }),
-
-methods: {
-    clearForm() {
-        this.postBody.title="";
-        this.postBody.text="";
-        this.postBody.backgroundURL="";
+    methods: {
+        clearForm() {
+            this.postBody.title="";
+            this.postBody.text="";
+            this.postBody.backgroundURL="";
     },
-  formSubmit() {
-    const PostData=this.postBody;
-  axios
-    .post(
-      "http://localhost:3000/posts/",
-      PostData
-    )
-    .then(response => {
-      this.resp = response;
-    })
-    .catch(e => {
-      console.error(e);
-    })}
-}
-}
-
-   
+        formSubmit() {
+            const PostData=this.postBody;
+            axios.post("http://localhost:3000/posts/",PostData)
+            .then(response => {
+                this.resp = response;
+            })
+            .catch(e => {
+                console.error(e);
+            })
+        }
+    }
+}   
 </script>
 
 <style lang="scss" scoped>
-    .main-section-add {
+.main-section-add {
     text-align: center;
     display: flex;
     flex-direction: column;

@@ -1,23 +1,23 @@
 <template lang="html">
-  <div class="journal-item">
-      <h3>{{title}}</h3>
-      <p class="full-post__text">{{text}}</p>
-      <router-link :to="{ name: 'journal'}">
-        Back
-      </router-link> 
-  </div>
+    <div class="journal-item">
+        <h3>{{title}}</h3>
+        <p class="full-post__text">{{text}}</p>
+        <router-link :to="{ name: 'journal'}">
+            Back
+        </router-link> 
+    </div>
 </template>
 
 <script>
-  export default {
-    props: ['id','title','text'],
-  }
+    export default {
+        props: ['id','title','text'],
+    }
 </script>
 
 <style lang="scss" scoped>
- .journal-item{
-  display: flex;
-  flex-direction: column;
+.journal-item{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     h3{
       font-size: 40px;

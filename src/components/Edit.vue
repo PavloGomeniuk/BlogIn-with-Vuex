@@ -6,8 +6,8 @@
 		</textarea>
 		<button type=submit>Put changes</button>
 		<router-link :to="{ name: 'journal'}">
-        Back to journal
-      </router-link>
+        	Back to journal
+      	</router-link>
 	</form>
 </template>
 

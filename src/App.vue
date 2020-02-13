@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-     <header class="header">
+    <div id="app">
+        <header class="header">
             <section class="header-menu-section">
                 <h1 class="header-menu-section-h1">Blogin<span>.</span></h1>
                 <nav class="nav-header">
@@ -60,7 +60,7 @@
                 </div>
             </section>
         </footer>
-  </div>
+    </div>
 </template>
 
 <style lang="scss">

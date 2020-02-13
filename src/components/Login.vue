@@ -31,9 +31,9 @@
 <script>
     export default {
         data: ()=> ({
-          user:"",
-          password:"",
-          notAuth:false,
+            user:"",
+            password:"",
+            notAuth:false,
         }),
         methods: {
         	formSubmit() {
