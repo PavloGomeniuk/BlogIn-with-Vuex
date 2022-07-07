@@ -38,6 +38,8 @@ export default {
             axios.post("http://localhost:3000/posts/",PostData)
             .then(response => {
                 this.resp = response;
+                console.log("message added"); 
+                this.clearForm();
             })
             .catch(e => {
                 console.error(e);
