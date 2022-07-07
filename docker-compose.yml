@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  mongo:
+    image: 'mongo'
+
+  serverblog:
+     build: '../Server-for-BlogIn'
+     depends_on:
+      - 'mongo'
+     ports:
+      - '3000:3000'
+
+  blogin:
+    build: '.'
+    depends_on:
+      - 'serverblog'
+    ports:
+      - '8081:8081'
